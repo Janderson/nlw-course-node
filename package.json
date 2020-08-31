@@ -4,13 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsnd --transpile-only --ignore-watch node_modules src/server.ts"
+    "start": "tsnd --transpile-only --ignore-watch node_modules src/server.ts",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
   },
   "devDependencies": {
     "ts-node-dev": "^1.0.0-pre.61",
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/node": "^14.6.2",
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "path": "^0.12.7",
+    "sqlite3": "^5.0.0"
   }
 }
